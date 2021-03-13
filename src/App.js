@@ -8,7 +8,7 @@ import { addDataToMap } from "kepler.gl/actions";
 import useSwr from "swr";
 
 const reducers = combineReducers({
-  keplerGl: keplerGlReducer
+  keplerGl: keplerGlReducer,
 });
 
 const store = createStore(reducers, {}, applyMiddleware(taskMiddleware));
@@ -38,15 +38,15 @@ function Map() {
           datasets: {
             info: {
               label: "COVID-19",
-              id: "covid19"
+              id: "covid19",
             },
-            data
+            data,
           },
           option: {
             centerMap: true,
-            readOnly: false
+            readOnly: false,
           },
-          config: {}
+          config: {},
         })
       );
     }
